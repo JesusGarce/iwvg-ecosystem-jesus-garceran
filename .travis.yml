@@ -16,6 +16,8 @@ addons:
     token:
       secure: "QaOxIhU8z12TXqvcwL6x60Ge8auNtDut/R5c0t/8mcsX0wzsTtXvN5cc1/GqM/WWi0AzWVVJ6kmMRTyJR1DzXp+RcqbfBci0d8XY3yjLvUBHW6NPXJxampr6GrMxZiuVX6IAXjfQNviarSFSjlVHWl8bTA6FeqGiWeN+YA/QX1YIBgVp6c59MkeL20ORSbGW+NlulDLQcJk5aJORupRXk8oxAkKNvT8JRMPdjl1xa7kISmysXORf5SQAczXi7yuC0Dy61VDINNHXQbNTdc8jhfsxddT5jYZJdC/0QDQX4GpqkfgQ4dhGdjwx/D4GeW75FIb6IrUrN/BOrr8fUNhd0zccab8MrxvreCgi9Wog4jUB2ZtFWSLeFZV8/Nioq6kopCSzI3xncLgH5PF/bzTJ9DIClDOyJLWnPcDft02JCHyXXsSiEY4o3g2AKf5a+BugNmwHW7+9uxcdMnCpnFuc16l+S/wfJtsUibbGWlVogi55lixJ06BqLtjrNvlUtsI4K1P5ytGtXGt1QmFF0xDzV4rtED3AUy3Jy77LwSPizcct6BsR0vXiF1521fEbx1UpFV/3utJQSABIlwsIS5In0vNDO6Nq2Zei7YOX4aAfkyTDwehV3vo+gbrWHUdz9+oUwa2Od51bwHT81OkG/2ghd4WZEOlzkkhBRuPqBuasAL0="
 script:
+#Test unitario y de integracion con cobertura (jacoco)
+- mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
 # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
 - mvn clean verify sonar:sonar -Dsonar.projectKey=iwvg-ecosystem-jesus-garceran
 
