@@ -22,4 +22,14 @@ script:
 - mvn sonar:sonar -Pcoverage -Dsonar.projectKey=JesusGarce_iwvg-ecosystem-jesus-garceran
 
 
+#Deploy https://iwvg-ecosystem.herokuapp.com/api
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU
+  on:
+    branch: master
+#  app: iwvg-ecosystem, por defecto, nombre del artefacto
+
+
 
