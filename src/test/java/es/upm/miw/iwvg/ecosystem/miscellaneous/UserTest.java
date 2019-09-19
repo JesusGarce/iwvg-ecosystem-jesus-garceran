@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.ecosystem;
+package es.upm.miw.iwvg.ecosystem.miscellaneous;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,40 +9,40 @@ public class UserTest {
     private User user;
 
     @BeforeEach
-    void createUser(){
-        user = new User(1,"Pablo","Garcia");
+    void createUser() {
+        user = new User(1, "Pablo", "Garcia");
     }
 
     @Test
-    void testUser(){
-        user = new User(2,"Jesús", "Garcerán");
+    void testUser() {
+        user = new User(2, "Jesús", "Garcerán");
         assertEquals(2, user.getNumber());
         assertEquals("Jesús", user.getName());
         assertEquals("Garcerán", user.getFamilyName());
     }
 
     @Test
-    void testFullName(){
+    void testFullName() {
         assertEquals("Pablo Garcia", user.fullName());
     }
 
     @Test
-    void testInitials(){
+    void testInitials() {
         assertEquals("P.", user.initials());
     }
 
     @Test
-    void testFamilyName(){
+    void testFamilyName() {
         assertEquals("Garcia", user.getFamilyName());
     }
 
     @Test
-    void testName(){
+    void testName() {
         assertEquals("Pablo", user.getName());
     }
 
     @Test
-    void testNumber(){
+    void testNumber() {
         assertEquals(1, user.getNumber());
     }
 

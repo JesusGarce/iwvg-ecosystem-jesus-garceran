@@ -1,4 +1,4 @@
-package es.upm.miw.iwvg.ecosystem;
+package es.upm.miw.iwvg.ecosystem.miscellaneous;
 
 public class User {
 
