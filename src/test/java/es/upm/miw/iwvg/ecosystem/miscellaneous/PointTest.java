@@ -34,7 +34,7 @@ class PointTest {
     }
 
     @Test
-    void testPointPoint(){
+    void testPointPoint() {
         Point pointCloned = new Point(point);
         assertEquals(2, pointCloned.getX());
         assertEquals(3, pointCloned.getY());

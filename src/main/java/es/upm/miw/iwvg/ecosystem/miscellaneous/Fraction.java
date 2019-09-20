@@ -45,23 +45,23 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
-    public Fraction additingFractions(Fraction fraction){
+    public Fraction additingFractions(Fraction fraction) {
         return new Fraction(this.numerator + fraction.numerator, this.denominator + fraction.denominator);
     }
 
-    public Fraction subtractingFractions(Fraction fraction){
+    public Fraction subtractingFractions(Fraction fraction) {
         return new Fraction(this.numerator - fraction.numerator, this.denominator - fraction.denominator);
     }
 
-    public boolean isProperFraction(){
+    public boolean isProperFraction() {
         return this.numerator > this.denominator;
     }
 
-    public boolean isImproperFraction(){
+    public boolean isImproperFraction() {
         return this.denominator > this.numerator;
     }
 
-    public boolean areEquals(Fraction fraction){
+    public boolean areEquals(Fraction fraction) {
         return (this.numerator == fraction.numerator && this.denominator == fraction.denominator);
     }
 

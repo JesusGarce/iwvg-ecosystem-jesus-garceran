@@ -26,9 +26,13 @@ public class User {
         return this.name.substring(0, 1) + ".";
     }
 
-    public String fullInitials() { return this.name.substring(0, 1)+"."+this.familyName.substring(0, 1)+".";}
+    public String fullInitials() {
+        return this.name.substring(0, 1) + "." + this.familyName.substring(0, 1) + ".";
+    }
 
-    public String fullNameInUpperCase(){ return fullName().toUpperCase();}
+    public String fullNameInUpperCase() {
+        return fullName().toUpperCase();
+    }
 
     public int getNumber() {
         return this.number;

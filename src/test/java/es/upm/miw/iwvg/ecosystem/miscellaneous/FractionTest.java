@@ -3,9 +3,7 @@ package es.upm.miw.iwvg.ecosystem.miscellaneous;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FractionTest {
     Fraction fraction;
@@ -36,32 +34,50 @@ public class FractionTest {
 
     @Test
     void testAdditingFractions() {
-        Fraction sum = fraction.additingFractions(new Fraction(2,2));
+        Fraction sum = fraction.additingFractions(new Fraction(2, 2));
         assertEquals(8, sum.getNumerator());
         assertEquals(5, sum.getDenominator());
     }
 
     @Test
     void testSubtractingFractions() {
-        Fraction sum = fraction.subtractingFractions(new Fraction(2,2));
+        Fraction sum = fraction.subtractingFractions(new Fraction(2, 2));
         assertEquals(4, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
     }
 
     @Test
-    void testAreEquals() {
-        Fraction fractionCloned = new Fraction(6,3);
+    void testAreEqualsTrue() {
+        Fraction fractionCloned = new Fraction(6, 3);
         assertTrue(fraction.areEquals(fractionCloned));
     }
 
     @Test
-    void testImproperFraction(){
+    void testAreEqualsFalse() {
+        Fraction fractionCloned = new Fraction(6, 2);
+        assertFalse(fraction.areEquals(fractionCloned));
+    }
+
+    @Test
+    void testImproperFractionFlase() {
         assertFalse(fraction.isImproperFraction());
     }
 
     @Test
-    void testProperFraction(){
+    void testImproperFractionTrue() {
+        Fraction fraction = new Fraction(3, 6);
+        assertTrue(fraction.isImproperFraction());
+    }
+
+    @Test
+    void testProperFractionTrue() {
         assertTrue(fraction.isProperFraction());
+    }
+
+    @Test
+    void testProperFractionFalse() {
+        Fraction fraction = new Fraction(3, 6);
+        assertFalse(fraction.isProperFraction());
     }
 
     @Test

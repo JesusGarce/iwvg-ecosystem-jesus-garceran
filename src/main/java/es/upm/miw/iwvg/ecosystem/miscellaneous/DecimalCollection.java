@@ -25,12 +25,12 @@ public class DecimalCollection {
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
     }
 
-    public double multiply(){
+    public double multiply() {
         this.validateIsNullOrEmpty();
         return this.collection.stream().mapToDouble(Double::doubleValue).reduce(1, (a, b) -> a * b);
     }
 
-    public double average(){
+    public double average() {
         this.validateIsNullOrEmpty();
         return this.collection.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
     }
