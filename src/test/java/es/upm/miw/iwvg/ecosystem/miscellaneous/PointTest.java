@@ -34,6 +34,13 @@ class PointTest {
     }
 
     @Test
+    void testPointPoint(){
+        Point pointCloned = new Point(point);
+        assertEquals(2, pointCloned.getX());
+        assertEquals(3, pointCloned.getY());
+    }
+
+    @Test
     void testModule() {
         assertEquals(3.6055, point.module(), 10e-5);
     }
@@ -41,6 +48,30 @@ class PointTest {
     @Test
     void testPhase() {
         assertEquals(0.9828, point.phase(), 10e-5);
+    }
+
+    @Test
+    void testIncreaseX() {
+        point.increaseX();
+        assertEquals(3, point.getX());
+    }
+
+    @Test
+    void testIncreaseY() {
+        point.increaseY();
+        assertEquals(4, point.getY());
+    }
+
+    @Test
+    void testDecreaseX() {
+        point.decreaseX();
+        assertEquals(1, point.getX());
+    }
+
+    @Test
+    void testDecreaseY() {
+        point.decreaseY();
+        assertEquals(2, point.getY());
     }
 
     @Test
