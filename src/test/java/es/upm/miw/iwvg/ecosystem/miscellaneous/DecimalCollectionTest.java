@@ -36,6 +36,16 @@ class DecimalCollectionTest {
     }
 
     @Test
+    void testMultiply() {
+        assertEquals(-12.0, this.decimalCollection.multiply(), 10e-5);
+    }
+
+    @Test
+    void testAverage() {
+        assertEquals(1.5, this.decimalCollection.average(), 10e-5);
+    }
+
+    @Test
     void testSumArithmeticExceptionIfEmpty() {
         ArithmeticException exception = assertThrows(ArithmeticException.class, () -> new DecimalCollection().sum());
         LogManager.getLogger(this.getClass()).debug(exception.getMessage());
