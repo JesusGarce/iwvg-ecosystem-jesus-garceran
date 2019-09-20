@@ -59,17 +59,6 @@ public class FractionTest {
     }
 
     @Test
-    void testImproperFractionFlase() {
-        assertFalse(fraction.isImproperFraction());
-    }
-
-    @Test
-    void testImproperFractionTrue() {
-        Fraction fraction = new Fraction(3, 6);
-        assertTrue(fraction.isImproperFraction());
-    }
-
-    @Test
     void testProperFractionTrue() {
         assertTrue(fraction.isProperFraction());
     }
