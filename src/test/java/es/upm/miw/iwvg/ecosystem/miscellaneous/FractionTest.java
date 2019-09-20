@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class FractionTest {
     Fraction fraction;
@@ -34,14 +35,14 @@ public class FractionTest {
     }
 
     @Test
-    void additingFractions() {
+    void testAdditingFractions() {
         Fraction sum = fraction.additingFractions(new Fraction(2,2));
         assertEquals(8, sum.getNumerator());
         assertEquals(5, sum.getDenominator());
     }
 
     @Test
-    void subtractingFractions() {
+    void testSubtractingFractions() {
         Fraction sum = fraction.subtractingFractions(new Fraction(2,2));
         assertEquals(4, sum.getNumerator());
         assertEquals(1, sum.getDenominator());
@@ -53,6 +54,15 @@ public class FractionTest {
         assertTrue(fraction.areEquals(fractionCloned));
     }
 
+    @Test
+    void testImproperFraction(){
+        assertFalse(fraction.isImproperFraction());
+    }
+
+    @Test
+    void testProperFraction(){
+        assertTrue(fraction.isProperFraction());
+    }
 
     @Test
     void testEnumerator() {
