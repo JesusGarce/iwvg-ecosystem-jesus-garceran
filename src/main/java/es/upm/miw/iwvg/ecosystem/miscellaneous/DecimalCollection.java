@@ -22,17 +22,12 @@ public class DecimalCollection {
 
     public double sum() {
         this.validateIsNullOrEmpty();
-        /*
-        Version java 1.7
-        double sum = 0;
-        for (double item : this.collection) {
-            sum += item;
-        }
-        return sum;
-        */
-        // return this.collection.stream().mapToDouble(value -> value).sum();
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
+    }
 
+    public double multiply(){
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().mapToDouble(Double::doubleValue).reduce(1, (a, b) -> a * b);
     }
 
     private void validateIsNullOrEmpty() {
