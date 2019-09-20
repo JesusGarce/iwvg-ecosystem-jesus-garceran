@@ -45,6 +45,14 @@ public class Fraction {
         return (double) numerator / denominator;
     }
 
+    public Fraction additingFractions(Fraction fraction){
+        return new Fraction(this.numerator + fraction.numerator, this.denominator + fraction.denominator);
+    }
+
+    public Fraction subtractingFractions(Fraction fraction){
+        return new Fraction(this.numerator - fraction.numerator, this.denominator - fraction.denominator);
+    }
+
     public boolean areEquals(Fraction fraction){
         return (this.numerator == fraction.numerator && this.denominator == fraction.denominator);
     }
