@@ -32,6 +32,22 @@ public class Point {
         this.y -= origin.getY();
     }
 
+    public void increaseX() {
+        this.x++;
+    }
+
+    public void increaseY() {
+        this.y++;
+    }
+
+    public void decreaseX() {
+        this.x--;
+    }
+
+    public void decreaseY() {
+        this.y--;
+    }
+
     public int getX() {
         return this.x;
     }

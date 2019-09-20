@@ -9,37 +9,37 @@ public class FractionTest {
     Fraction fraction;
 
     @BeforeEach
-    void createFraction(){
-        fraction = new Fraction(6,3);
+    void createFraction() {
+        fraction = new Fraction(6, 3);
     }
 
     @Test
-    void testFractionIntInt(){
-        fraction = new Fraction(6,2);
+    void testFractionIntInt() {
+        fraction = new Fraction(6, 2);
         assertEquals(6, fraction.getNumerator());
         assertEquals(2, fraction.getDenominator());
     }
 
     @Test
-    void testFraction(){
+    void testFraction() {
         fraction = new Fraction();
         assertEquals(1, fraction.getNumerator());
         assertEquals(1, fraction.getDenominator());
     }
 
     @Test
-    void testDecimal(){
-        assertEquals(2,fraction.decimal());
+    void testDecimal() {
+        assertEquals(2, fraction.decimal());
     }
 
     @Test
-    void testEnumerator(){
+    void testEnumerator() {
         assertEquals(3, fraction.getDenominator());
     }
 
     @Test
-    void testNumerator(){
-        assertEquals(6,fraction.getNumerator());
+    void testNumerator() {
+        assertEquals(6, fraction.getNumerator());
     }
 }
 

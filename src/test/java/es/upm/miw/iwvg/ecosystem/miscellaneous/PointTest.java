@@ -44,6 +44,30 @@ class PointTest {
     }
 
     @Test
+    void testIncreaseX() {
+        point.increaseX();
+        assertEquals(3, point.getX());
+    }
+
+    @Test
+    void testIncreaseY() {
+        point.increaseY();
+        assertEquals(4, point.getY());
+    }
+
+    @Test
+    void testDecreaseX() {
+        point.decreaseX();
+        assertEquals(1, point.getX());
+    }
+
+    @Test
+    void testDecreaseY() {
+        point.decreaseY();
+        assertEquals(2, point.getY());
+    }
+
+    @Test
     void testTranslateOrigin() {
         this.point.translateOrigin(new Point(1, 1));
         assertEquals(1, point.getX());
