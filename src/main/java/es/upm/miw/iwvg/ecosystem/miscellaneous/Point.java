@@ -19,6 +19,8 @@ public class Point {
         this(0, 0);
     }
 
+    public Point(Point point) { this(point.getX(), point.getY()); }
+
     public double module() {
         return Math.sqrt((double) this.x * this.x + this.y * this.y);
     }
@@ -30,6 +32,22 @@ public class Point {
     public void translateOrigin(Point origin) {
         this.x -= origin.getX();
         this.y -= origin.getY();
+    }
+
+    public void increaseX() {
+        this.x++;
+    }
+
+    public void increaseY() {
+        this.y++;
+    }
+
+    public void decreaseX() {
+        this.x--;
+    }
+
+    public void decreaseY() {
+        this.y--;
     }
 
     public int getX() {
