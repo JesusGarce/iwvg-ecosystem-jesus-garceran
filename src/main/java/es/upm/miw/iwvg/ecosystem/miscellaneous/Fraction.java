@@ -57,10 +57,6 @@ public class Fraction {
         return this.numerator > this.denominator;
     }
 
-    public boolean isImproperFraction() {
-        return this.denominator > this.numerator;
-    }
-
     public boolean areEquals(Fraction fraction) {
         return (this.numerator == fraction.numerator && this.denominator == fraction.denominator);
     }
