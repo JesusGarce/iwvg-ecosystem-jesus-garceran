@@ -28,6 +28,12 @@ public class FractionTest {
     }
 
     @Test
+    void testAreEquals() {
+        Fraction fractionCloned = new Fraction(6,3);
+        assertEquals(true, fraction.areEquals(fractionCloned));
+    }
+
+    @Test
     void testDecimal() {
         assertEquals(2, fraction.decimal());
     }
