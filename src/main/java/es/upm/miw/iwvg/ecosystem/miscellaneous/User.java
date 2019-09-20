@@ -26,6 +26,8 @@ public class User {
         return this.name.substring(0, 1) + ".";
     }
 
+    public String fullInitials() { return this.name.substring(0, 1)+"."+this.familyName.substring(0, 1)+".";}
+
     public int getNumber() {
         return this.number;
     }

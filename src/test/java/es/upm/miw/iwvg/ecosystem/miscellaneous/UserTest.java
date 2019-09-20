@@ -32,6 +32,11 @@ public class UserTest {
     }
 
     @Test
+    void testFullInitials() {
+        assertEquals("P.G.", user.fullInitials());
+    }
+
+    @Test
     void testFamilyName() {
         assertEquals("Garcia", user.getFamilyName());
     }
