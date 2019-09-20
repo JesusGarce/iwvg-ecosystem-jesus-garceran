@@ -30,6 +30,11 @@ public class DecimalCollection {
         return this.collection.stream().mapToDouble(Double::doubleValue).reduce(1, (a, b) -> a * b);
     }
 
+    public double average(){
+        this.validateIsNullOrEmpty();
+        return this.collection.stream().mapToDouble(Double::doubleValue).average().getAsDouble();
+    }
+
     private void validateIsNullOrEmpty() {
         if ((this.collection == null) || this.collection.isEmpty()) {
             throw new ArithmeticException("Null or Empty collection");
